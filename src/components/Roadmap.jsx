@@ -11,7 +11,7 @@ const Roadmap = () => (
     <div className="container md:pb-10">
       <Heading tag={<span className="text-white">Explore Our Domains</span>} title="Project Domains We Consult" />
 
-      <div className="relative grid gap-6 md:grid-cols-4 md:gap-4 md:pb-10">
+      <div className="relative grid gap-6 md:grid-cols-4 md:gap-4 md:pb-10 tablet-roadmap-grid">
         {roadmap.map((item) => {
           return (
             <div

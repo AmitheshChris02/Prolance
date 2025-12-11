@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const PricingList = () => {
   return (
-    <div className="flex gap-[1rem] max-lg:flex-wrap items-stretch">
+    <div className="flex gap-[1rem] max-lg:flex-wrap items-stretch tablet-pricing-container">
       {pricing.map((plan, i) => (
         <div
           key={plan.id}

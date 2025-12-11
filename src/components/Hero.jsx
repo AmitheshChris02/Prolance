@@ -72,7 +72,7 @@ const Hero = () => {
             alt="Stars"
           />
         </div>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem] mt-4">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem] mt-4 tablet-hero-content">
           <div className="flex justify-center mb-0">
             <img
               src={smallSphere}

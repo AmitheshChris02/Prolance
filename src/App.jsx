@@ -58,19 +58,19 @@ const App = () => {
         <Header />
         <Hero />
 
-        <LazyLoadComponent className="min-h-[40rem]" id="services">
+        <LazyLoadComponent className="min-h-[40rem] scroll-mt-[6rem]" id="services">
           <Services />
         </LazyLoadComponent>
 
-        <LazyLoadComponent className="min-h-[30rem]" id="domains">
+        <LazyLoadComponent className="min-h-[30rem] scroll-mt-[6rem]" id="domains">
           <Roadmap />
         </LazyLoadComponent>
 
-        <LazyLoadComponent className="min-h-[50rem]" id="pricing">
+        <LazyLoadComponent className="min-h-[50rem] scroll-mt-[6rem]" id="pricing">
           <Pricing />
         </LazyLoadComponent>
 
-        <LazyLoadComponent className="min-h-[40rem]" id="referrals">
+        <LazyLoadComponent className="min-h-[40rem] scroll-mt-[6rem]" id="referrals">
           <Collaboration />
         </LazyLoadComponent>
 
@@ -82,7 +82,7 @@ const App = () => {
           <CompanyLogos className="block" />
         </LazyLoadComponent>
 
-        <LazyLoadComponent className="min-h-[40rem]" id="contact">
+        <LazyLoadComponent className="min-h-[40rem] scroll-mt-[6rem]" id="contact">
           <Contact />
         </LazyLoadComponent>
 

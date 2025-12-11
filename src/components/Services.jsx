@@ -40,7 +40,7 @@ const Services = () => {
           text={<span className="text-white">Prolance unlocks your potential with expert guidance and support.</span>}
         />
         <div className="relative">
-          <div className="relative z-1 grid gap-5 lg:grid-cols-2">
+          <div className="relative z-1 grid gap-5 lg:grid-cols-2 tablet-services-grid">
             <div className="relative min-h-[39rem] bg-n-6 rounded-3xl overflow-hidden hover:bg-conic-gradient transition-colors duration-300">
               <div className="absolute inset-[1px] bg-n-7 rounded-[1.45rem] overflow-hidden">
                 <div className="absolute inset-0">
