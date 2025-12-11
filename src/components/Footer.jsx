@@ -8,7 +8,7 @@ const Footer = () => {
         <p className="caption text-n-4 lg:block">
           <span className="font-semibold font-serif text-xs">&copy;</span>{" "}
           <span className="text-color-1 font-medium">Prolance Technologies</span>{" "}
-          {new Date().getFullYear()}. All rights reserved.
+          {new Date().getFullYear()}. All rights reserved by us.
         </p>
 
         <ul className="flex gap-5 flex-wrap">
