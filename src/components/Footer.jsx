@@ -11,7 +11,7 @@ const Footer = () => {
           {new Date().getFullYear()}. All rights reserved.
         </p>
 
-        <ul className="flex gap-5 flex-wrap">
+        <ul className="flex gap-5 flex-wrap sm:mr-8">
           {socials.map((social) => (
             <a
               href={social.url}
