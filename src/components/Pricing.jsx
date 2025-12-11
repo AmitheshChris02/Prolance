@@ -6,7 +6,7 @@ import Section from "./Section";
 
 const Pricing = () => {
   return (
-    <Section className="overflow-hidden" id="pricing" customPaddings="pt-8 lg:pt-8 xl:pt-8 pb-10 lg:pb-16 xl:pb-20">
+    <Section className="overflow-hidden" customPaddings="pt-8 lg:pt-8 xl:pt-8 pb-10 lg:pb-16 xl:pb-20">
       <div className="container relative z-2">
         <Heading
           tag={<span className="text-white">Choose Your Package</span>}

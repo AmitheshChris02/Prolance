@@ -6,7 +6,7 @@ import Section from "./Section";
 
 const Collaboration = () => {
   return (
-    <Section crosses id="referrals">
+    <Section crosses>
       <div className="container lg:flex relative">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">

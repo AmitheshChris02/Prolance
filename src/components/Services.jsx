@@ -7,7 +7,7 @@ import Typewriter from "typewriter-effect";
 
 const Services = () => {
   return (
-    <Section id="services" crosses customPaddings className="pt-[2rem] lg:pt-[4rem] pb-10 lg:pb-16 xl:pb-20">
+    <Section crosses customPaddings className="pt-[2rem] lg:pt-[4rem] pb-10 lg:pb-16 xl:pb-20">
       <div className="container">
         <Heading
           title={

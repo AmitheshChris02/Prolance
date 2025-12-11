@@ -7,7 +7,7 @@ import Tagline from "./Tagline";
 import { Gradient } from "./design/Roadmap";
 
 const Roadmap = () => (
-  <Section className="overflow-hidden" id="domains" customPaddings="py-10 lg:py-16 xl:py-20 pb-4 lg:pb-4 xl:pb-4">
+  <Section className="overflow-hidden" customPaddings="py-10 lg:py-16 xl:py-20 pb-4 lg:pb-4 xl:pb-4">
     <div className="container md:pb-10">
       <Heading tag={<span className="text-white">Explore Our Domains</span>} title="Project Domains We Consult" />
 

@@ -30,7 +30,7 @@ const Contact = () => {
     );
 
     return (
-        <Section id="contact" crosses>
+        <Section crosses>
             <div className="container relative">
                 <Heading
                     title={
