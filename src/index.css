@@ -102,3 +102,55 @@
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
+/* Tablet-specific fixes (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+  /* Reduce Hero Size */
+  .tablet-hero-content {
+    margin-bottom: 2rem !important;
+  }
+
+  .tablet-hero-content h1 {
+    font-size: 2.25rem !important;
+    line-height: 2.75rem !important;
+    margin-top: -3rem !important;
+  }
+
+  /* Pricing Grid: 2 cards per row */
+  .tablet-pricing-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .tablet-pricing-container>div {
+    width: 100% !important;
+    max-width: none !important;
+    flex: none !important;
+  }
+
+  /* Services Grid: 2 cards per row */
+  .tablet-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Roadmap/Domains Grid: 2 cards per row */
+  .tablet-roadmap-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Contact Section: Clean Stacked or 2-col? */
+  /* User asked for "left and right columns alignment" */
+  /* If space allows, let's keep it stacked but add padding/margin */
+  .tablet-contact-wrapper {
+    flex-direction: column !important;
+    gap: 3rem !important;
+  }
+
+  /* Footer: Ensure spacing */
+  .tablet-footer-container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}

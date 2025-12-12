@@ -30,7 +30,7 @@ const Contact = () => {
     );
 
     return (
-        <Section id="contact" crosses>
+        <Section crosses>
             <div className="container relative">
                 <Heading
                     title={
@@ -49,7 +49,7 @@ const Contact = () => {
                     text={<span className="text-white">Have a project in mind? Fill out the form and we'll get back to you within 24 hours.</span>}
                 />
 
-                <div className="flex flex-col lg:flex-row gap-10 lg:items-stretch">
+                <div className="flex flex-col lg:flex-row gap-10 lg:items-stretch tablet-contact-wrapper">
                     {/* Left Column: Contact Information */}
                     <div className="flex-1 flex flex-col gap-6">
                         <h4 className="h4">Contact Information</h4>

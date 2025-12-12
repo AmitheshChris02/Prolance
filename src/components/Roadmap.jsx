@@ -7,11 +7,11 @@ import Tagline from "./Tagline";
 import { Gradient } from "./design/Roadmap";
 
 const Roadmap = () => (
-  <Section className="overflow-hidden" id="domains" customPaddings="py-10 lg:py-16 xl:py-20 pb-4 lg:pb-4 xl:pb-4">
+  <Section className="overflow-hidden" customPaddings="py-10 lg:py-16 xl:py-20 pb-4 lg:pb-4 xl:pb-4">
     <div className="container md:pb-10">
       <Heading tag={<span className="text-white">Explore Our Domains</span>} title="Project Domains We Consult" />
 
-      <div className="relative grid gap-6 md:grid-cols-4 md:gap-4 md:pb-10">
+      <div className="relative grid gap-6 md:grid-cols-4 md:gap-4 md:pb-10 tablet-roadmap-grid">
         {roadmap.map((item) => {
           return (
             <div
