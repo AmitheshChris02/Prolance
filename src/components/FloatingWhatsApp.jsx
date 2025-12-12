@@ -4,7 +4,7 @@ import React from "react";
 const FloatingWhatsApp = () => {
     return (
         <a
-            href="https://wa.me/91XXXXXXXXXX" // Replace with actual number if provided or use placeholder
+            href="https://wa.me/8610678329" // Replace with actual number if provided or use placeholder
             className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:bg-[#128C7E] transition-colors duration-300"
             target="_blank"
             rel="noreferrer"
