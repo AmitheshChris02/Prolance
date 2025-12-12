@@ -9,6 +9,15 @@ const Footer = () => {
           <span className="font-semibold font-serif text-xs">&copy;</span>{" "}
           <span className="text-color-1 font-medium">Prolance Technologies</span>{" "}
           {new Date().getFullYear()}. All rights reserved by us.
+          <br />
+          <a
+            href="https://drive.google.com/file/d/1WKvcS6_0Js1aMKzZmhyvd861DWmMkvBm/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-n-3 hover:text-color-1 transition-colors text-xs underline"
+          >
+            Terms and Conditions
+          </a>
         </p>
 
         <ul className="flex gap-5 flex-wrap sm:mr-8">
