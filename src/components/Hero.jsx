@@ -90,11 +90,11 @@ const Hero = () => {
                 <Typewriter
                   options={{
                     strings: [
-                      "Final Year Projects",
+                      "Final Year Project",
                       "Conference",
-                      "Research Papers",
+                      "Research Paper",
                       "Journal",
-                      "Final Year Projects",
+                      "Final Year Project",
                       "UI/UX Design",
                       ""
                     ],

@@ -72,6 +72,21 @@ const Contact = () => {
 
     return (
         <Section crosses>
+            {/* Loading Overlay */}
+            {isSubmitting && (
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-n-8/90 backdrop-blur-sm">
+                    <div className="flex flex-col items-center gap-4">
+                        {/* Spinner */}
+                        <div className="relative w-16 h-16">
+                            <div className="absolute inset-0 rounded-full border-4 border-n-6"></div>
+                            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-color-1 border-r-color-2 animate-spin"></div>
+                        </div>
+                        {/* Loading Text */}
+                        <p className="text-n-1 text-lg font-semibold">Submitting your request...</p>
+                    </div>
+                </div>
+            )}
+
             <div className="container relative">
                 <Heading
                     title={
