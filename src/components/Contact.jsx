@@ -5,6 +5,9 @@ import Section from "./Section";
 import { useState } from "react";
 
 const Contact = () => {
+    // TODO: Replace this URL with your deployed Google Apps Script web app URL
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxsuCZV6FR_imveG9DPe8BxciTQVifXZ_A0RAKtVGJpm85viItnZWO7JsZpsZ7pqBkd/exec";
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -12,15 +15,53 @@ const Contact = () => {
         requirement: "Final Year Project",
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log(formData);
-        alert("Thank you for your request! We will get back to you soon.");
+
+        // Check if Google Script URL is configured
+        if (GOOGLE_SCRIPT_URL === "YOUR_DEPLOYMENT_URL_HERE") {
+            alert("⚠️ Google Sheets integration not configured yet. Please follow the setup guide to deploy the Google Apps Script.");
+            console.log("Form data:", formData);
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        try {
+            // Send data to Google Sheets via Apps Script
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // Required for Google Apps Script
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Note: With no-cors mode, we can't read the response
+            // We assume success if no error is thrown
+            alert("✅ Thank you for your request! We will get back to you soon.");
+
+            // Reset form
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                requirement: "Final Year Project",
+            });
+
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("❌ There was an error submitting your request. Please try again or contact us directly at prolance.org@gmail.com");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const ContactIcon = ({ icon }) => (
@@ -273,8 +314,12 @@ const Contact = () => {
                                         </select>
                                     </div>
 
-                                    <Button className="w-full mt-4" type="submit">
-                                        Submit Request
+                                    <Button
+                                        className="w-full mt-4"
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? "Submitting..." : "Submit Request"}
                                     </Button>
                                 </form>
                             </div>
