@@ -215,9 +215,9 @@ export const pricing = [
     description: "Perfect for semester submissions and learning",
     price: "200",
     features: [
-      "Domain Mini Projects (AI/ML, etc.)",
-      "Resume Boosting Projects",
-      "Basic Documentation",
+      "Domain Mini Projects designed to boost your resume",
+      "Domains: AI/ML, Full Stack, Blockchain, Cybersecurity",
+      "Basic Documentation and installation support",
     ],
     premium: false,
   },

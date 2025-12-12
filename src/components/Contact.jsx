@@ -102,7 +102,7 @@ const Contact = () => {
                             />
                         </span>
                     }
-                    text={<span className="text-white">Have a project in mind? Fill out the form and we'll get back to you within 24 hours.</span>}
+                    text={<span className="text-white">Have a project in mind?<br /> Fill out the form and we'll get back to you within 3 hours.</span>}
                 />
 
                 <div className="flex flex-col lg:flex-row gap-10 lg:items-stretch tablet-contact-wrapper">
@@ -170,7 +170,7 @@ const Contact = () => {
                                         href="tel:+91XXXXXXXXXX"
                                         className="body-2 text-n-3 hover:text-color-1 transition-colors"
                                     >
-                                        +91 XXXXX XXXXX
+                                        +91 8610678329
                                     </a>
                                 </div>
                             </div>
@@ -302,7 +302,7 @@ const Contact = () => {
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleChange}
-                                            placeholder="+91 XXXXX XXXXX"
+                                            placeholder="+91 8610678329"
                                             className="w-full px-6 py-4 bg-n-7 border border-n-1/10 rounded-xl focus:outline-none focus:border-color-1 text-n-1 placeholder:text-n-4 transition-colors"
                                             required
                                         />
