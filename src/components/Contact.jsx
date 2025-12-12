@@ -200,7 +200,7 @@ const Contact = () => {
                                 <div>
                                     <h6 className="h6 mb-1">WhatsApp</h6>
                                     <a
-                                        href="https://wa.me/91XXXXXXXXXX"
+                                        href="https://wa.me/8610678329"
                                         target="_blank"
                                         rel="noreferrer"
                                         className="body-2 text-color-1 hover:underline transition-colors"
