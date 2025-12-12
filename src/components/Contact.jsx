@@ -249,7 +249,7 @@ const Contact = () => {
                             <div className="p-6 bg-n-7 rounded-[1.1375rem]">
                                 <h6 className="h6 mb-2 text-color-2">Quick Response</h6>
                                 <p className="body-2 text-n-3">
-                                    We typically respond within 2–4 hours during business hours (9 AM –
+                                    We typically respond within 2–4 hours during business hours <br />(9 AM –
                                     8 PM IST).
                                 </p>
                             </div>
