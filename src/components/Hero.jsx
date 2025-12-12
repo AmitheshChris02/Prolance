@@ -90,11 +90,11 @@ const Hero = () => {
                 <Typewriter
                   options={{
                     strings: [
-                      "Final Year Projects",
+                      "Final Year Project",
                       "Conference",
-                      "Research Papers",
+                      "Research Paper",
                       "Journal",
-                      "Final Year Projects",
+                      "Final Year Project",
                       "UI/UX Design",
                       ""
                     ],
@@ -113,7 +113,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Trusted by 20+ Students & Professionals. Get complete project guidance and support until final review.
+            Trusted by 100+ Students & Professionals. <br />Get complete project guidance and support until final review.
           </p>
           <div className="flex justify-center gap-4">
             <Button href="#contact" purple>

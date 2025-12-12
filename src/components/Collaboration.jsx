@@ -47,7 +47,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Start Referring</Button>
+          <Button><a href="https://wa.me/8610678329" target="_blank" rel="noreferrer">Start Referring</a></Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">

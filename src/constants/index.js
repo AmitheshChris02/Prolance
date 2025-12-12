@@ -215,9 +215,9 @@ export const pricing = [
     description: "Perfect for semester submissions and learning",
     price: "200",
     features: [
-      "Domain Mini Projects (AI/ML, etc.)",
-      "Resume Boosting Projects",
-      "Basic Documentation",
+      "Domain Mini Projects designed to boost your resume",
+      "Domains: AI/ML, Full Stack, Blockchain, Cybersecurity",
+      "Basic Documentation and installation support",
     ],
     premium: false,
   },
@@ -228,6 +228,7 @@ export const pricing = [
     price: "5,000",
     features: [
       "Support until final review",
+      "1 on 1 explanation and installation support",
       "Report and PPT : (+₹500)",
       "IEEE Paper/Journal Paper : (+₹3000)",
     ],
@@ -240,6 +241,7 @@ export const pricing = [
     price: "5,500",
     features: [
       "Support until final review",
+      "1 on 1 explanation and installation support",
       "Report and PPT : (+₹500)",
       "IEEE Paper/Journal Paper : (+₹3000)",
     ],
@@ -251,8 +253,9 @@ export const pricing = [
     description: "Professional design services for your apps",
     price: "2,500",
     features: [
-      "Mobile UI & Web UI",
-      "Complete Package (Popular)",
+      "1 on 1 consultation and support until acceptance",
+      "Mobile UI & Web UI responsive",
+      "Convert prototype into functional website",
       "Modern & Clean Designs",
     ],
     premium: false,

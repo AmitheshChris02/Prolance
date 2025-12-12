@@ -5,6 +5,9 @@ import Section from "./Section";
 import { useState } from "react";
 
 const Contact = () => {
+    // TODO: Replace this URL with your deployed Google Apps Script web app URL
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxsuCZV6FR_imveG9DPe8BxciTQVifXZ_A0RAKtVGJpm85viItnZWO7JsZpsZ7pqBkd/exec";
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -12,15 +15,53 @@ const Contact = () => {
         requirement: "Final Year Project",
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log(formData);
-        alert("Thank you for your request! We will get back to you soon.");
+
+        // Check if Google Script URL is configured
+        if (GOOGLE_SCRIPT_URL === "YOUR_DEPLOYMENT_URL_HERE") {
+            alert("⚠️ Google Sheets integration not configured yet. Please follow the setup guide to deploy the Google Apps Script.");
+            console.log("Form data:", formData);
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        try {
+            // Send data to Google Sheets via Apps Script
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // Required for Google Apps Script
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Note: With no-cors mode, we can't read the response
+            // We assume success if no error is thrown
+            alert("✅ Thank you for your request! We will get back to you soon.");
+
+            // Reset form
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                requirement: "Final Year Project",
+            });
+
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("❌ There was an error submitting your request. Please try again or contact us directly at prolance.org@gmail.com");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const ContactIcon = ({ icon }) => (
@@ -31,6 +72,21 @@ const Contact = () => {
 
     return (
         <Section crosses>
+            {/* Loading Overlay */}
+            {isSubmitting && (
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-n-8/90 backdrop-blur-sm">
+                    <div className="flex flex-col items-center gap-4">
+                        {/* Spinner */}
+                        <div className="relative w-16 h-16">
+                            <div className="absolute inset-0 rounded-full border-4 border-n-6"></div>
+                            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-color-1 border-r-color-2 animate-spin"></div>
+                        </div>
+                        {/* Loading Text */}
+                        <p className="text-n-1 text-lg font-semibold">Submitting your request...</p>
+                    </div>
+                </div>
+            )}
+
             <div className="container relative">
                 <Heading
                     title={
@@ -46,7 +102,7 @@ const Contact = () => {
                             />
                         </span>
                     }
-                    text={<span className="text-white">Have a project in mind? Fill out the form and we'll get back to you within 24 hours.</span>}
+                    text={<span className="text-white">Have a project in mind?<br /> Fill out the form and we'll get back to you within 3 hours.</span>}
                 />
 
                 <div className="flex flex-col lg:flex-row gap-10 lg:items-stretch tablet-contact-wrapper">
@@ -114,7 +170,7 @@ const Contact = () => {
                                         href="tel:+91XXXXXXXXXX"
                                         className="body-2 text-n-3 hover:text-color-1 transition-colors"
                                     >
-                                        +91 XXXXX XXXXX
+                                        +91 8610678329
                                     </a>
                                 </div>
                             </div>
@@ -136,12 +192,7 @@ const Contact = () => {
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5.025L2.5 21.5l4.586-.916A9.968 9.968 0 0 0 12 22z"
-                                            />
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M16.5 16.5c-4.606 0-8-4.551-8-7.883 0-1.11.89-2 2.817-2 .546 0 1.05.358 1.182.884l.659 2.637a.979.979 0 0 1-.275.968l-.659.659c.394.887 1.389 1.882 2.276 2.276l.659-.659a.98.98 0 0 1 .968-.275l2.637.66c.526.131.884.636.884 1.181 0 1.928-.89 2.55-2.147 2.55z"
+                                                d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"
                                             />
                                         </svg>
                                     }
@@ -149,7 +200,7 @@ const Contact = () => {
                                 <div>
                                     <h6 className="h6 mb-1">WhatsApp</h6>
                                     <a
-                                        href="https://wa.me/91XXXXXXXXXX"
+                                        href="https://wa.me/8610678329"
                                         target="_blank"
                                         rel="noreferrer"
                                         className="body-2 text-color-1 hover:underline transition-colors"
@@ -198,7 +249,7 @@ const Contact = () => {
                             <div className="p-6 bg-n-7 rounded-[1.1375rem]">
                                 <h6 className="h6 mb-2 text-color-2">Quick Response</h6>
                                 <p className="body-2 text-n-3">
-                                    We typically respond within 2–4 hours during business hours (9 AM –
+                                    We typically respond within 2–4 hours during business hours <br />(9 AM –
                                     8 PM IST).
                                 </p>
                             </div>
@@ -246,7 +297,7 @@ const Contact = () => {
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleChange}
-                                            placeholder="+91 XXXXX XXXXX"
+                                            placeholder="+91 8610678329"
                                             className="w-full px-6 py-4 bg-n-7 border border-n-1/10 rounded-xl focus:outline-none focus:border-color-1 text-n-1 placeholder:text-n-4 transition-colors"
                                             required
                                         />
@@ -273,8 +324,12 @@ const Contact = () => {
                                         </select>
                                     </div>
 
-                                    <Button className="w-full mt-4" type="submit">
-                                        Submit Request
+                                    <Button
+                                        className="w-full mt-4"
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? "Submitting..." : "Submit Request"}
                                     </Button>
                                 </form>
                             </div>
