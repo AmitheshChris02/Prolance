@@ -33,7 +33,7 @@ import {
   sliders04,
   telegram,
   twitter,
-  yourlogo,
+  // yourlogo,
   srmRmp,
   easwari,
 } from "../assets";
