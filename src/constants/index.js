@@ -223,22 +223,9 @@ export const pricing = [
   },
   {
     id: "1",
-    title: "Final Year \nProject (Our Topic)",
+    title: "Final Year \nProject (Any Topic)",
     description: "Complete support for final year students",
     price: "5,000",
-    features: [
-      "Support until final review",
-      "1 on 1 explanation and installation support",
-      "Report and PPT : (+₹500)",
-      "IEEE Paper/Journal Paper : (+₹3000)",
-    ],
-    premium: true,
-  },
-  {
-    id: "2",
-    title: "Final Year \nProject (Client Topic)",
-    description: "Complete support for final year students",
-    price: "5,500",
     features: [
       "Support until final review",
       "1 on 1 explanation and installation support",
